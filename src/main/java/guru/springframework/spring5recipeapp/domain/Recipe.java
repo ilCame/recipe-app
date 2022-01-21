@@ -7,7 +7,7 @@ import java.util.Set;
 public class Recipe {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //identity 'e un tipo speciale che supporta la generazione automatica di una sequenza
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String description;
