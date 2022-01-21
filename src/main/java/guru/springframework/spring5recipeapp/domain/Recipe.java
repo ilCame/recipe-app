@@ -21,6 +21,9 @@ public class Recipe {
     @Lob
     private Byte[] image;
 
+    @Enumerated(value = EnumType.STRING) //EnumType ordinal e' il default non si specifica cosa si prende ma manda un ordine numerico, con string invece invia la stringa
+    private Difficulty difficulty;
+
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
@@ -97,5 +100,29 @@ public class Recipe {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public Set<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(Set<Ingredient> ingredients) {
+        this.ingredients = ingredients;
     }
 }
