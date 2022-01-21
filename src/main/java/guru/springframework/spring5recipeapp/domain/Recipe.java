@@ -21,7 +21,7 @@ public class Recipe {
     @Lob
     private Byte[] image;
 
-    @Enumerated(value = EnumType.STRING) //EnumType ordinal e' il default non si specifica cosa si prende ma manda un ordine numerico, con string invece invia la stringa
+    @Enumerated(value = EnumType.STRING)
     private Difficulty difficulty;
 
     @OneToOne(cascade = CascadeType.ALL)
