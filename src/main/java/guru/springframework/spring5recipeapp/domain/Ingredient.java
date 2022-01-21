@@ -12,7 +12,7 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.DETACH)
     private UnitOfMeasure unitOfMeasure;
 
     @ManyToOne
