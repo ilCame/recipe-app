@@ -18,7 +18,7 @@ public class Recipe {
     private String url;
     private String direction;
 
-    @Lob // viene creato come un Large Object Field binario
+    @Lob
     private Byte[] image;
 
     @OneToOne(cascade = CascadeType.ALL)
