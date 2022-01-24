@@ -12,7 +12,7 @@ public class UnitOfMeasure {
     @OneToOne
     private Ingredient ingredient;
 
-    private String uom;
+    private String description;
 
     public Long getId() {
         return id;
@@ -31,10 +31,10 @@ public class UnitOfMeasure {
     }
 
     public String getUom() {
-        return uom;
+        return description;
     }
 
-    public void setUom(String uom) {
-        this.uom = uom;
+    public void setUom(String description) {
+        this.description = description;
     }
 }
