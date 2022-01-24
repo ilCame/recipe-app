@@ -1,17 +1,19 @@
 package guru.springframework.spring5recipeapp.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+/**
+ * Created by jt on 6/13/17.
+ */
 @Entity
-public class UnitOfMeasure extends BaseEntity {
+public class UnitOfMeasure {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @OneToOne
-    private Ingredient ingredient;
-
     private String description;
 
     public Long getId() {
@@ -22,19 +24,11 @@ public class UnitOfMeasure extends BaseEntity {
         this.id = id;
     }
 
-    public Ingredient getIngredient() {
-        return ingredient;
-    }
-
-    public void setIngredient(Ingredient ingredient) {
-        this.ingredient = ingredient;
-    }
-
-    public String getUom() {
+    public String getDescription() {
         return description;
     }
 
-    public void setUom(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 }

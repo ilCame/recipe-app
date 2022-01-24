@@ -2,6 +2,9 @@ package guru.springframework.spring5recipeapp.domain;
 
 import javax.persistence.*;
 
+/**
+ * Created by jt on 6/13/17.
+ */
 @Entity
 public class Notes {
 
@@ -11,7 +14,9 @@ public class Notes {
 
     @OneToOne
     private Recipe recipe;
-    private String recipeNote;
+
+    @Lob
+    private String recipeNotes;
 
     public Long getId() {
         return id;
@@ -29,11 +34,11 @@ public class Notes {
         this.recipe = recipe;
     }
 
-    public String getRecipeNote() {
-        return recipeNote;
+    public String getRecipeNotes() {
+        return recipeNotes;
     }
 
-    public void setRecipeNote(String recipeNote) {
-        this.recipeNote = recipeNote;
+    public void setRecipeNotes(String recipeNotes) {
+        this.recipeNotes = recipeNotes;
     }
 }
