@@ -17,14 +17,13 @@ import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest
 class UnitOfMeasureRepositoryTestIT {
 
-    @Autowired // ora spring puo` fare dependency injection nel nostro integration test, avremo quindi una istanza di UnitOfMeasure iniettata qua dentro
+    @Autowired
     UnitOfMeasureRepository unitOfMeasureRepository;
     @BeforeEach
     void setUp() {
     }
 
     @Test
-    @DirtiesContext // sto facendo qualcosa che potrebbe cambiare dei dati e contaminare altri test, questo lo evita
     void findByDescription() {
 
         Optional<UnitOfMeasure> uomOptional = unitOfMeasureRepository.findByDescription("Teaspoon");
